@@ -1,0 +1,83 @@
+PS C:\Users\yashp\OneDrive\YASH AI ML\PROJECTS\Employee Attrition Prediction using Support Vector Machine (SVM)> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "c:\Users\yashp\OneDrive\YASH AI ML\PROJECTS\Employee Attrition Prediction using Support Vector Machine (SVM)\sklearn-env\Scripts\Activate.ps1")
+(sklearn-env) PS C:\Users\yashp\OneDrive\YASH AI ML\PROJECTS\Employee Attrition Prediction using Support Vector Machine (SVM)> & "c:\Users\yashp\OneDrive\YASH AI ML\PROJECTS\Employee Attrition Prediction using Support Vector Machine (SVM)\sklearn-env\Scripts\python.exe" "c:/Users/yashp/OneDrive/YASH AI ML/PROJECTS/Employee Attrition Prediction using Support Vector Machine (SVM)/Employee Attrition Prediction using Support Vector Machine (SVM).py"
+Gender
+Male      516
+Female    484
+Name: count, dtype: int64
+-----------------------------------------------------------
+Marital_Status
+Married     348
+Single      339
+Divorced    313
+Name: count, dtype: int64
+-----------------------------------------------------------
+Department
+Finance      218
+HR           211
+Sales        199
+Marketing    198
+IT           174
+Name: count, dtype: int64
+-----------------------------------------------------------
+Job_Role
+Manager      268
+Executive    252
+Analyst      251
+Assistant    229
+Name: count, dtype: int64
+             Age  Gender  ... Distance_From_Home Number_of_Companies_Worked
+Employee_ID               ...                                              
+1             58  Female  ...                 20                          3
+2             48  Female  ...                 25                          2
+3             34    Male  ...                 45                          3
+4             27  Female  ...                 35                          3
+5             40    Male  ...                 44                          3
+...          ...     ...  ...                ...                        ...
+996           27  Female  ...                 24                          4
+997           47    Male  ...                 39                          3
+998           50  Female  ...                 33                          2
+999           28  Female  ...                 41                          4
+1000          48  Female  ...                 43                          2
+
+[1000 rows x 24 columns]
+(1000, 25)
+Employee_ID
+1        No
+2        No
+3        No
+4        No
+5        No
+       ... 
+996      No
+997     Yes
+998      No
+999      No
+1000     No
+Name: Attrition, Length: 1000, dtype: str
+               Age    Job_Level  ...  Distance_From_Home  Number_of_Companies_Worked
+count  1000.000000  1000.000000  ...         1000.000000                 1000.000000
+mean     39.991000     3.055000  ...           24.507000                    2.484000
+std      11.780055     1.399977  ...           14.138099                    1.111296
+min      20.000000     1.000000  ...            1.000000                    1.000000
+25%      30.000000     2.000000  ...           12.000000                    1.000000
+50%      41.000000     3.000000  ...           24.000000                    2.000000
+75%      50.250000     4.000000  ...           37.000000                    3.000000
+max      59.000000     5.000000  ...           49.000000                    4.000000
+
+[8 rows x 19 columns]
+[[ 1.52953545 -1.468616    0.81090801 ...  1.36204028 -0.31894353
+   0.46455504]
+ [ 0.68021819  1.39000395  0.32108155 ... -0.45765281  0.03488777
+  -0.43574542]
+ [-0.50882597 -1.468616    0.45629724 ...  1.36204028  1.45021297
+   0.46455504]
+ ...
+ [ 0.85008164 -1.468616   -1.39463271 ...  0.45219373  0.60101785
+  -0.43574542]
+ [-1.01841632  0.67534896  1.69885825 ...  1.36204028  1.16714793
+   1.3648555 ]
+ [ 0.68021819 -0.75396101  0.04841352 ...  0.45219373  1.30868045
+  -0.43574542]]
+X.shape: (1000, 24) X_train.shape: (800, 19) X_test.shape: (200, 19)
+Accuracy score of the training data: 55.375 %
+Accuracy score of the test data: 52.5 %
